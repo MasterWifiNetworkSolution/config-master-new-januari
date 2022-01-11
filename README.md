@@ -7,3 +7,6 @@ Like, Beri Komentar, Subscribe, dan Share
 
 salam dari
 Master Wifi network solution
+
+# File Config
+https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/CONFIG

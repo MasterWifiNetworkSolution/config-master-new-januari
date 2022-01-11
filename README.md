@@ -13,3 +13,6 @@ https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main
 
 # File Proxy Provider
 https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/PROVIDER/proxy_provider
+
+# File Rule Provider
+https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/PROVIDER/rule_provider

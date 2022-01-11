@@ -16,3 +16,6 @@ https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main
 
 # File Rule Provider
 https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/PROVIDER/rule_provider
+
+# Contoh script akun openclash
+https://github.com/MasterWifiNetworkSolution/config-master-new-januari/blob/main/SCRIPT%20AKUN/contoh-script-akun.txt

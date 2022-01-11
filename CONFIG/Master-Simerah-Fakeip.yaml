@@ -9,8 +9,8 @@ mode: script
 log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
-external-ui: "/usr/share/openclash/dashboard" 
-interface-name: eth1
+external-ui: "/usr/share/openclash/dashboard"
+interface-name: eth0
 dns:
   enable: true
   ipv6: false
@@ -136,27 +136,26 @@ dns:
   - "*.linksys.com"
   - "*.linksyssmartwifi.com"
   - "+.battlenet.com.cn"
-ipv6: false
 proxy-providers:
-  proxymaster:
+  pilihanmaster:
     type: file
-    path: ./proxy_provider/akunmaster.yaml
+    path: "./proxy_provider/akunmaster.yaml"
     health-check:
       enable: true
       interval: 99
       lazy: true
       url: http://www.gstatic.com/generate_204
 proxy-groups:
-- name: ULTIMAXMASTER
-  type: url-test
+- name: XTRAMASTER
+  type: select
   tolerance: 99
   use:
-  - proxymaster
+  - pilihanmaster
 rule-providers:
-  Arenaofvalormaster:
+  Callofdutymaster:
     type: file
     behavior: classical
-    path: "./rule_provider/arenaofvalormaster.yaml"
+    path: "./rule_provider/callofdutymaster.yaml"
   Browsermaster:
     type: file
     behavior: classical
@@ -205,6 +204,10 @@ rule-providers:
     type: file
     behavior: classical
     path: "./rule_provider/ressomaster.yaml"
+  Robloxmaster:
+    type: file
+    behavior: classical
+    path: "./rule_provider/robloxmaster.yaml"
   Smulemaster:
     type: file
     behavior: classical
@@ -244,28 +247,29 @@ rule-providers:
 script:
   code: |
     def main(ctx, metadata):
-        ruleset_action = {"Arenaofvalormaster": "DIRECT",
-            "Browsermaster": "ULTIMAXMASTER",
+        ruleset_action = {"Callofdutymaster": "XTRAMASTER",
+            "Browsermaster": "XTRAMASTER",
             "Deezermaster": "DIRECT",
-            "Facebookmaster": "ULTIMAXMASTER",
+            "Facebookmaster": "XTRAMASTER",
             "Garenamaster": "DIRECT",
             "Iklanmaster": "REJECT",
             "Instagrammaster": "DIRECT",
             "LAN": "DIRECT",
             "Langitmusikmaster": "DIRECT",
             "Mobilegendsmaster": "DIRECT",
-            "Onlineshopmaster": "ULTIMAXMASTER",
-            "Pubgmaster": "ULTIMAXMASTER",
+            "Onlineshopmaster": "XTRAMASTER",
+            "Pubgmaster": "XTRAMASTER",
             "Ressomaster": "DIRECT",
+            "Robloxmaster": "DIRECT",
             "Smulemaster": "DIRECT",
             "Soundcloudmaster": "DIRECT",
             "Starmakermaster": "DIRECT",
-            "Speedtestmaster": "ULTIMAXMASTER",
-            "Tiktokmaster": "ULTIMAXMASTER",
+            "Speedtestmaster": "XTRAMASTER",
+            "Tiktokmaster": "XTRAMASTER",
             "Wesingmaster": "DIRECT",
             "Whatsappmaster": "DIRECT",
-            "Youtubemaster": "ULTIMAXMASTER",
-            "Zoommaster": "DIRECT"
+            "Youtubemaster": "XTRAMASTER",
+            "Zoommaster": "DIRECT",
           }
 
         port = int(metadata["dst_port"])
@@ -273,7 +277,7 @@ script:
         if metadata["network"] == "UDP":
             if port == "443,3478,4244,5222,5223,5228,5288,5242,5349,17000,20030,20031,34784,45395,50318,59234":
                 ctx.log('[Script] matched QUIC traffic use browsermaster')
-                return "ULTIMAXMASTER"
+                return "XTRAMASTER"
 
         if metadata["dst_ip"] == "":
             metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
@@ -291,38 +295,39 @@ script:
                 return ruleset_action[ruleset]
 
         code = ctx.geoip(metadata["dst_ip"])
-        if code == "CN":
-            ctx.log('[Script] Geoip CN')
-            return "DIRECT"
+        if code == "ID":
+            ctx.log('[Script] Geoip ID')
+            return "XTRAMASTER"
 
         ctx.log('[Script] FINAL')
-        return "ULTIMAXMASTER"
+        return "XTRAMASTER"
 rules:
-- RULE-SET,Arenaofvalormaster,DIRECT
-- RULE-SET,Browsermaster,ULTIMAXMASTER
+- RULE-SET,Callofdutymaster,XTRAMASTER
+- RULE-SET,Browsermaster,XTRAMASTER
 - RULE-SET,Deezermaster,DIRECT
-- RULE-SET,Facebookmaster,ULTIMAXMASTER
+- RULE-SET,Facebookmaster,XTRAMASTER
 - RULE-SET,Garenamaster,DIRECT
 - RULE-SET,Iklanmaster,REJECT
 - RULE-SET,Instagrammaster,DIRECT
 - RULE-SET,LAN,DIRECT
 - RULE-SET,Langitmusikmaster,DIRECT
 - RULE-SET,Mobilegendsmaster,DIRECT
-- RULE-SET,Onlineshopmaster,ULTIMAXMASTER
-- RULE-SET,Pubgmaster,ULTIMAXMASTER
+- RULE-SET,Onlineshopmaster,XTRAMASTER
+- RULE-SET,Pubgmaster,XTRAMASTER
 - RULE-SET,Ressomaster,DIRECT
+- RULE-SET,Robloxmaster,XTRAMASTER
 - RULE-SET,Smulemaster,DIRECT
 - RULE-SET,Soundcloudmaster,DIRECT
 - RULE-SET,Starmakermaster,DIRECT
-- RULE-SET,Speedtestmaster,ULTIMAXMASTER
+- RULE-SET,Speedtestmaster,XTRAMASTER
 - RULE-SET,Tiktokmaster,DIRECT
 - RULE-SET,Wesingmaster,DIRECT
 - RULE-SET,Whatsappmaster,DIRECT
-- RULE-SET,Youtubemaster,ULTIMAXMASTER
+- RULE-SET,Youtubemaster,XTRAMASTER
 - RULE-SET,Zoommaster,DIRECT
 - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
-- GEOIP,CN,DIRECT
-- MATCH,ULTIMAXMASTER
+- GEOIP,ID,XTRAMASTER
+- MATCH,XTRAMASTER
 tun:
   enable: true
   stack: gvisor
@@ -334,4 +339,4 @@ tun:
 profile:
   store-selected: true
 experimental:
-  interface-name: eth1
+  interface-name: eth0

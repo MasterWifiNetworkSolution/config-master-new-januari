@@ -1,0 +1,19 @@
+payload:
+
+  # Dukung channel saya dengan tekan subscribe di Master Wifi Netwok Solution
+  # Aktifkan tombol lonceng agar bisa selalu dapat informasi terbaru dari saya
+  # Silahkan di share jika informasi saya bermanfaat
+  # Bagi yang ingin sawer untuk keberlanjutan silahkan melalui di bawah ini
+  # via rekenng bank dan lain nya di https://sites.google.com/view/masterwifinetworksoluton/bantu-masterwifi
+
+  # > WHATSAPP
+  - DOMAIN-SUFFIX,g.whatsapp.net
+  - DOMAIN-SUFFIX,web.whatsapp.com
+  - DOMAIN-SUFFIX,scontent.whatsapp.net
+  - DOMAIN-SUFFIX,whatsapp.com
+  - DOMAIN-SUFFIX,static.whatsapp.net
+  - DOMAIN-SUFFIX,whatsapp.net
+  - DOMAIN-SUFFIX,mmg.whatsapp.net
+  - DOMAIN-SUFFIX,media.fbdj2-1.fna.whatsapp.net
+  - DOMAIN-SUFFIX,media-xsp1-2.cdn.whatsapp.net
+  - DST-PORT,38211

@@ -1,0 +1,43 @@
+payload: 
+
+  # Dukung channel saya dengan tekan subscribe di Master Wifi Netwok Solution
+  # Aktifkan tombol lonceng agar bisa selalu dapat informasi terbaru dari saya
+  # Silahkan di share jika informasi saya bermanfaat
+  # Bagi yang ingin sawer untuk keberlanjutan silahkan melalui di bawah ini
+  # via rekenng bank dan lain nya di https://sites.google.com/view/masterwifinetworksoluton/bantu-masterwifi
+
+  # > MOBILE LEGENDS MASTER WIFI NETWORK SOLUTION
+  - DOMAIN-SUFFIX,www.mobilelegends.com
+  - DOMAIN-SUFFIX,api.mobilelegends.com
+  - DOMAIN-SUFFIX,static.mobilelegends.com
+  - DOMAIN-SUFFIX,play.mobilelegends.com
+  - DOMAIN-SUFFIX,m.mobilelegends.com
+  - DOMAIN-SUFFIX,www.mobilelegends.com
+  - DOMAIN-SUFFIX,applink.mobilelegends.com
+  - DOMAIN-SUFFIX,assistant.mobilelegends.com
+  - DOMAIN-SUFFIX,creatorcamp.mobilelegends.com
+  - DOMAIN-SUFFIX,dev-test-web.mobilelegends.com
+  - DOMAIN-SUFFIX,esports.mobilelegends.com
+  - DOMAIN-SUFFIX,ftp.mobilelegends.com
+  - DOMAIN-SUFFIX,game.mobilelegends.com
+  - DOMAIN-SUFFIX,lore.mobilelegends.com
+  - DOMAIN-SUFFIX,m.mobilelegends.com
+  - DOMAIN-SUFFIX,manage.mobilelegends.com
+  - DOMAIN-SUFFIX,moba.mobilelegends.com
+  - DOMAIN-SUFFIX,kh.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,my.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,mysg.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,mysg-s4.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,mysg-s5.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,mysg-s6.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,sg.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,www.sg.mpl.mobilelegends.com
+  - DOMAIN-SUFFIX,msc.mobilelegends.com
+  - DOMAIN-SUFFIX,mtacc.mobilelegends.com
+  - DOMAIN-SUFFIX,play.mobilelegends.com
+  - DOMAIN-SUFFIX,static.mobilelegends.com
+  - DOMAIN-SUFFIX,web.mobilelegends.com
+  - DOMAIN-SUFFIX,worlds.mobilelegends.com
+
+  # > IP MOBILELEGENDS BANG BANG
+  - IP-CIDR,104.64.0.0/10

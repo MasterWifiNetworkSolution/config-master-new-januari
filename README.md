@@ -10,3 +10,6 @@ Master Wifi network solution
 
 # File Config
 https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/CONFIG
+
+# File Proxy Provider
+https://github.com/MasterWifiNetworkSolution/config-master-new-januari/tree/main/PROVIDER/proxy_provider

@@ -1,0 +1,11 @@
+- name: trojan-grpc
+  server: isikan host atau ip
+  port: 443
+  type: trojan
+  password: isikan key
+  network: grpc
+  sni: isikanbug.com
+  skip-cert-verify: true
+  udp: true
+  grpc-opts:
+    grpc-service-name: grpc-master-wifi

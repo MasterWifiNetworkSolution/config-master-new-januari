@@ -1,0 +1,3 @@
+# Silahkan klik link di bawah ini
+
+https://lancellc.gitbook.io/clash/clash-config-file/proxies

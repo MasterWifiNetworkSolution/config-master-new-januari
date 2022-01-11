@@ -1,9 +1,0 @@
-proxies:
-- name: "nama config"
-  type: trojan
-  server: isikan host atau ip
-  port: isikan port
-  password: isikan key atau password
-  udp: true
-  sni: isikanbug.com
-  skip-cert-verify: true

@@ -1,7 +1,7 @@
 # config-master-new-januari
 Gunakan sebaik mungkin ya script ini.
 
-Jangan lupa dukung saya dengan cara
+# Jangan lupa dukung Master Wifi network Solution dengan cara
 
 Like, Beri Komentar, Subscribe, dan Share
 

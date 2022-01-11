@@ -1,37 +1,9 @@
 proxies:
-- name: masterpremium
+- name: "nama config"
   type: trojan
-  server: itl.nextvpn.cc
-  port: 443
-  password: riqjo11
+  server: isikan host atau ip
+  port: isikan port
+  password: isikan key atau password
   udp: true
-  sni: spotify.com
+  sni: isikanbug.com
   skip-cert-verify: true
-- name: "Vmess"
-  type: vmess
-  server: sahx.dklongtong.live
-  port: 443
-  uuid: 4c778011-8359-4557-b4c2-3f3a3d667a3b
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: /v2ray
-  ws-headers:
-      Host: spotify.com
-- name: kituvpn
-  type: vmess
-  server: do9.kitu.xyz
-  port: 443
-  uuid: da12b7b6-4e9f-4d25-bcf8-dc482460b9d1
-  alterId: 0
-  cipher: chacha20-poly1305
-  udp: true
-  skip-cert-verify: true
-  tls: true
-  servername: spotify.com
-  network: ws
-  ws-path: "/vmess/"
-  ws-headers:
-    Host: spotify.com
